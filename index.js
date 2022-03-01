@@ -9,23 +9,23 @@ const fs = require('fs');
 const questions = [
     {
         type: 'input',
-        message: '?',
-        name: 'A'
+        message: 'Enter team managers name:',
+        name: 'managerName'
     },
     {
         type: 'input',
-        message: '?',
-        name: 'B'
+        message: 'Enter managers employee ID:',
+        name: 'managerID'
     },
     {
         type: 'input',
-        message: '?',
-        name: 'C'
+        message: 'Enter managers email address:',
+        name: 'mangerEmail'
     },
     {
         type: 'input',
-        message: '?',
-        name: 'D'
+        message: 'Enter managers office number:',
+        name: 'managerOffice'
     }
 ];
 

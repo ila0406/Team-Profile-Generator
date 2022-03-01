@@ -16,7 +16,7 @@ function renderLicenseSection(license) {}
 
 // `;
 // }
-const generateHTML = ({ A, B, C, D }) =>
+const generateHTML = ({ managerName, managerID, mangerEmail, managerOffice }) =>
   `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,12 +28,12 @@ const generateHTML = ({ A, B, C, D }) =>
 <body>
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Hi! My name is ${A}</h1>
-    <p class="lead">I am from ${B}.</p>
-    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+    <h1 class="display-4">Project Team</h1>
+    <p class="lead">Manager Employee ID ${managerID}.</p>
+    <h3 class="display-6">Team Manager: ${managerName}</h3>
     <ul class="list-group">
-      <li class="list-group-item">My GitHub username is ${C}</li>
-      <li class="list-group-item">LinkedIn: ${D}</li>
+      <li class="list-group-item">Manager's email address: ${mangerEmail}</li>
+      <li class="list-group-item">Manager's Office Number: ${managerOffice}</li>
     </ul>
   </div>
 </div>
