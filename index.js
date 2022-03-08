@@ -1,5 +1,5 @@
 // const generateMarkdown = require('./utils/generateMarkdown');
-const generateHTML = require('./utils/generateHTML');
+const generateHTML = require('./dist/generateHTML');
 
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
