@@ -38,42 +38,42 @@ const questions = [
     }
 ];
 
-return inquirer.prompt ([
-    {
-        type: 'list',
-        name: 'role',
-        message: "Please choose what you employee's role is",
-        choices: ['Engineer', 'Intern']
-    },
-    {
-        type: 'input',
-        name: 'name',
-        message: "What's is your employee's name?", 
-    },
-    {
-        type: 'input',
-        name: 'id',
-        message: "Please enter the employee's ID.",
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: "Please enter the employee's email.",
-    },
-    {
-        type: 'input',
-        name: 'github',
-        message: "Please enter your employee's github name.",
-        // adding a when field to make the prompt only visible when the role is an Engineer
-        when: (input) => input.role === "Engineer",
-    },
-    {
-        type: 'input',
-        name: 'school',
-        message: "Please enter the intern's school",
-        // added code to make the school question only visible to the Intern role
-        when: (input) => input.role === "Intern",
-    },
+// return inquirer.prompt ([
+//     {
+//         type: 'list',
+//         name: 'role',
+//         message: "Please choose what you employee's role is",
+//         choices: ['Engineer', 'Intern']
+//     },
+//     {
+//         type: 'input',
+//         name: 'name',
+//         message: "What's is your employee's name?", 
+//     },
+//     {
+//         type: 'input',
+//         name: 'id',
+//         message: "Please enter the employee's ID.",
+//     },
+//     {
+//         type: 'input',
+//         name: 'email',
+//         message: "Please enter the employee's email.",
+//     },
+//     {
+//         type: 'input',
+//         name: 'github',
+//         message: "Please enter your employee's github name.",
+//         // adding a when field to make the prompt only visible when the role is an Engineer
+//         when: (input) => input.role === "Engineer",
+//     },
+//     {
+//         type: 'input',
+//         name: 'school',
+//         message: "Please enter the intern's school",
+//         // added code to make the school question only visible to the Intern role
+//         when: (input) => input.role === "Intern",
+//     },
 
 
 // TODO: Create a function to write README file
