@@ -1,5 +1,9 @@
 // const generateMarkdown = require('./utils/generateMarkdown');
 const generateHTML = require('./lib/generateHTML');
+const Engineer = require("./lib/engineer.js");
+const Intern = require("./lib/intern.js");
+const Manager = require("./lib/manager.js");
+const teamMembers = [];
 
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
