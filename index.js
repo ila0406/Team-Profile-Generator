@@ -92,29 +92,30 @@ function writeToFile(fileName, data) {
      })
  }
 
-// // Function to initialize app
-// function init() {
-//     inquirer.prompt(questions)
-//         .then(answers => {
-//             console.log(answers)
-//              writeToFile('./dist/index.html',answers);
-//             // writeToFile('../../Generated-Readme/README.md',answers);
-//         }
-//     );
-// }
+// Function to initialize app
+function init() {
+    // inquirer.prompt(questions)
+    questions()
+        .then(answers => {
+            console.log(answers)
+             writeToFile('./dist/index.html',answers);
+            // writeToFile('../../Generated-Readme/README.md',answers);
+        }
+    );
+}
 
 // // Function call to initialize app
-// init();
+init();
 
-questions()
-// addManager()
-//     .then(addEmployee)
-    .then(teamMembers => {
-        return generateHTML(teamMembers);
-    })
-    .then(htmlData => {
-        return writeFile(htmlData);
-    })
-    .catch(err => {
-        console.log(err);
-    });
+// questions()
+// // addManager()
+// //     .then(addEmployee)
+//     .then(teamMembers => {
+//         return generateHTML(teamMembers);
+//     })
+//     .then(htmlData => {
+//         return writeFile(htmlData);
+//     })
+//     .catch(err => {
+//         console.log(err);
+//     });
