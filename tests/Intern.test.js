@@ -13,7 +13,11 @@ describe("Intern", () => {
 
     // });
 
-    // describe("getRole", () => {
+    describe("getRole", () => {
+        it('Gets role of Intern', () => {
+            const intern = new Intern('Delilah', '1', 'ila0406@gmail.com');
 
-    // }); 
+            expect(intern.getRole()).toEqual("Intern");
+        });
+    });
 });

@@ -13,7 +13,11 @@ describe("Engineer", () => {
 
     // });
 
-    // describe("getRole", () => {
+    describe("getRole", () => {
+        it('Gets role of Engineer', () => {
+            const engineer = new Engineer('Delilah', '1', 'ila0406@gmail.com');
 
-    // }); 
+            expect(engineer.getRole()).toEqual("Engineer");
+        });
+    });
 });

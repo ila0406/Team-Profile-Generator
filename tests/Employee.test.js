@@ -1,16 +1,6 @@
 const Employee = require("../lib/Employee");
 
 describe("Employee", () => {
-    // describe("revrse", () => {
-    //     it("", () => {
-    //     const str = "";
-
-    //     const result = new Algo().reverse(str);
-
-    //     expect(result).toEqual(reversed);
-    //     });
-    // });
-
     describe("name", () => {
         it("Should return an employee with a name", () => {
         const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
