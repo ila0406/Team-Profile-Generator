@@ -2,6 +2,7 @@ const Employee = require("../lib/Employee");
 
 describe("Employee", () => {
     describe("name", () => {
+        // test employee.name (10/16)
         it("Should return an employee with a name", () => {
         const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
 
@@ -10,6 +11,7 @@ describe("Employee", () => {
     });
 
     describe("id", () => {
+        // test employee.id (11/16)
         it("Should return an employee with a id", () => {
             const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
     
@@ -18,6 +20,7 @@ describe("Employee", () => {
     });
 
     describe("email", () => {
+        // test employee.email (12/16)
         it("Should return an employee with a email", () => {
             const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
     
@@ -26,6 +29,7 @@ describe("Employee", () => {
     });
 
     describe("getID", () => {
+        // test employee.getID (13/16)
         it('Gets the employee ID', () => {
             const employee = new Employee('Delilah', 1, 'ila0406@gmail.com');
     
@@ -34,6 +38,7 @@ describe("Employee", () => {
     });
 
     describe("getName", () => {
+        // test employee.getName (14/16)
         it('Gets the employee name', () => {
             const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
     
@@ -42,6 +47,7 @@ describe("Employee", () => {
     });
 
     describe("getEmail", () => {
+        // test employee.getEmail (15/16)
         it('Gets the employee email', () => {
             const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
     
@@ -50,6 +56,7 @@ describe("Employee", () => {
     });
 
     describe("getRole", () => {
+        // test employee.getRole (16/16)
         it('Gets the role of employee', () => {
             const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
     

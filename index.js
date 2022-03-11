@@ -1,4 +1,4 @@
-// const generateMarkdown = require('./utils/generateMarkdown');
+// variables needed for this application
 const {generateHTML, generateManagerCard, generateInternCard, generateEngrCard} = require('./lib/generateHTML');
 const Engineer = require("./lib/engineer.js");
 const Intern = require("./lib/intern.js");
@@ -9,7 +9,7 @@ const teamMembers = [];
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// An array of questions for user input
+// array of questions to prompt the user for information about their team
 const questions = () => {
     return inquirer.prompt([
         {
@@ -59,7 +59,7 @@ const questions = () => {
         }
     ])
     .then (employeeResponse => {
-
+        // takes users input to generate employee cards for HTML export
         let { name, id, email, role, officeNumber, github, school, moreEmployees } = employeeResponse; 
         let employee; 
         let employeeObject;
@@ -76,9 +76,10 @@ const questions = () => {
             employeeObject = new Intern (name, id, email, school);
             employee = generateInternCard(employeeObject);
         }
-        // pushing the returned data the the teamMembers array
+
         teamMembers.push(employee); 
 
+        // Keep cycling through questions prompt if more team members are needed
         if (moreEmployees) {
             return questions(); 
         } else {
@@ -90,7 +91,6 @@ const questions = () => {
 
 // Function to write HTML file
 function writeToFile(fileName, data) {
-    // fs.writeFile(fileName, JSON.stringify(data,null ,2), function(err) {
      fs.writeFile(fileName, generateHTML(data.join('')), function(err) { 
          console.log(err)
      })
@@ -98,15 +98,13 @@ function writeToFile(fileName, data) {
 
 // Function to initialize app
 function init() {
-    // inquirer.prompt(questions)
     questions()
         .then(answers => {
             console.log(answers)
              writeToFile('./dist/index.html',answers);
-            // writeToFile('../../Generated-Readme/README.md',answers);
         }
     );
 }
 
-// // Function call to initialize app
+// Function call to initialize app
 init();
