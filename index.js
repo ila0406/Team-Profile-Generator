@@ -1,5 +1,5 @@
 // const generateMarkdown = require('./utils/generateMarkdown');
-const generateHTML = require('./lib/generateHTML');
+const {generateHTML, generateManagerCard, generateInternCard, generateEngrCard} = require('./lib/generateHTML');
 const Engineer = require("./lib/engineer.js");
 const Intern = require("./lib/intern.js");
 const Manager = require("./lib/manager.js");
@@ -60,23 +60,27 @@ const questions = () => {
     ])
     .then (employeeResponse => {
 
-        let { name, id, email, role, officeNumber, github, school, addEmployees } = employeeResponse; 
+        let { name, id, email, role, officeNumber, github, school, moreEmployees } = employeeResponse; 
         let employee; 
+        let employeeObject;
 
         if (role === "Manager") {
-            employee = new Manager (name, id, email, officeNumber);
+            employeeObject= new Manager (name, id, email, officeNumber);
+            employee = generateManagerCard(employeeObject);
         }
         else if (role === "Engineer") {
-            employee = new Engineer (name, id, email, github);
+            employeeObject = new Engineer (name, id, email, github);
+            employee = generateEngrCard(employeeObject);
 
         } else if (role === "Intern") {
-            employee = new Intern (name, id, email, school);
+            employeeObject = new Intern (name, id, email, school);
+            employee = generateInternCard(employeeObject);
         }
         // pushing the returned data the the teamMembers array
         teamMembers.push(employee); 
 
-        if (addEmployees) {
-            return addEmployee(teamMembers); 
+        if (moreEmployees) {
+            return questions(); 
         } else {
             return teamMembers;
         }
@@ -87,7 +91,7 @@ const questions = () => {
 // Function to write HTML file
 function writeToFile(fileName, data) {
     // fs.writeFile(fileName, JSON.stringify(data,null ,2), function(err) {
-     fs.writeFile(fileName, generateHTML(data), function(err) { 
+     fs.writeFile(fileName, generateHTML(data.join('')), function(err) { 
          console.log(err)
      })
  }
@@ -106,16 +110,3 @@ function init() {
 
 // // Function call to initialize app
 init();
-
-questions()
-// addManager()
-//     .then(addEmployee)
-    .then(teamMembers => {
-        return generateHTML(teamMembers);
-    })
-    .then(htmlData => {
-        return writeFile(htmlData);
-    })
-    .catch(err => {
-        console.log(err);
-    });
