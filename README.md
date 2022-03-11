@@ -61,7 +61,7 @@ run > npm run test to run the 4 included test suites
 
 <a id='screenshots' href='#readme-badges'><img id='usage' src='./src/TestsSuccess.png' style='height: 300px'></a>
 
-## <a id='questions' href='#readme-badges'><img id='usage' src='https://github.com/teamjuli0/readme-badges/blob/main/themes/clean-dark/menu-categories/questions-alt.png?raw=true' style='height: 400px'></a>
+## <a id='questions' href='#readme-badges'><img id='usage' src='https://github.com/teamjuli0/readme-badges/blob/main/themes/clean-dark/menu-categories/questions-alt.png?raw=true' style='height: 40px'></a>
 If you have questions, you can either open a issue in my Github repository <br>
 GitHub: <https://github.com/ila0406> <br>
 <br>
