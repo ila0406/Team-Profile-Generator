@@ -25,35 +25,35 @@ describe("Employee", () => {
             });
     });
 
-    // describe("getID", () => {
-    //     it('Gets the employee ID', () => {
-    //         const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
+    describe("getID", () => {
+        it('Gets the employee ID', () => {
+            const employee = new Employee('Delilah', 1, 'ila0406@gmail.com');
     
-    //         expect(employee.getId()).toEqual(expect.any(Number));
-    //     });
-    // });
+            expect(employee.getId()).toEqual(expect.any(Number));
+        });
+    });
 
-    // describe("getName", () => {
-    //     it('Gets the employee name', () => {
-    //         const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
+    describe("getName", () => {
+        it('Gets the employee name', () => {
+            const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
     
-    //         expect(employee.getName()).toEqual(expect.any(String));
-    //     });
-    // });
+            expect(employee.getName()).toEqual(expect.any(String));
+        });
+    });
 
-    // describe("getEmail", () => {
-    //     it('Gets the employee email', () => {
-    //         const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
+    describe("getEmail", () => {
+        it('Gets the employee email', () => {
+            const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
     
-    //         expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
-    //     });
-    // });
+            expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
+        });
+    });
 
-    // describe("getRole", () => {
-    //     it('Gets the role of employee', () => {
-    //         const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
+    describe("getRole", () => {
+        it('Gets the role of employee', () => {
+            const employee = new Employee('Delilah', '1', 'ila0406@gmail.com');
     
-    //         expect(employee.getRole()).toEqual("Employee");
-    //     });
-    // }); 
+            expect(employee.getRole()).toEqual("Employee");
+        });
+    }); 
 });

@@ -3,8 +3,8 @@ const Intern = require("../lib/Intern");
 describe("Intern", () => {
     describe("school", () => {
         it("Should return an employee with their school", () => {
-            const intern = new Intern('Delilah', '1', 'RPI');
-    
+            const intern = new Intern('Delilah', '1', 'ila0406@gmail.com', 'RPI');
+            
             expect(intern.school).toBeDefined();
             });
     });

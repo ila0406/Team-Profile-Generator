@@ -3,9 +3,9 @@ const Engineer = require("../lib/Engineer");
 describe("Engineer", () => {
     describe("gitHub", () => {
         it("Should return an employee with an id", () => {
-            const engineer = new Engineer('Delilah', '1', 'ila0406@gmail');
-    
-            expect(engineer.gitHub).toBeDefined();
+            const engineer = new Engineer('Delilah', '1', 'ila0406@gmail', 'ila0406');
+           
+            expect(engineer.github).toBeDefined();
             });
     });
 

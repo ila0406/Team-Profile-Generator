@@ -107,15 +107,15 @@ function init() {
 // // Function call to initialize app
 init();
 
-// questions()
-// // addManager()
-// //     .then(addEmployee)
-//     .then(teamMembers => {
-//         return generateHTML(teamMembers);
-//     })
-//     .then(htmlData => {
-//         return writeFile(htmlData);
-//     })
-//     .catch(err => {
-//         console.log(err);
-//     });
+questions()
+// addManager()
+//     .then(addEmployee)
+    .then(teamMembers => {
+        return generateHTML(teamMembers);
+    })
+    .then(htmlData => {
+        return writeFile(htmlData);
+    })
+    .catch(err => {
+        console.log(err);
+    });
