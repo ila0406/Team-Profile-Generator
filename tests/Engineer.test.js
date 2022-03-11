@@ -3,18 +3,22 @@ const Engineer = require("../lib/Engineer");
 describe("Engineer", () => {
     describe("gitHub", () => {
         it("Should return an employee with an id", () => {
-            const employee = new Employee('Delilah', '1', 'ila0406@gmail');
+            const engineer = new Engineer('Delilah', '1', 'ila0406@gmail');
     
-            expect(employee.gitHub).toBeDefined();
+            expect(engineer.gitHub).toBeDefined();
             });
     });
 
-    // describe("getGitHub", () => {
-
-    // });
+    describe("getGitHub", () => {
+        it('Gets the github username from for the engineer ', () => {
+            const engineer = new Engineer('Delilah', '1', 'ila0406@gmail', 'ila0406');
+    
+            expect(engineer.getGithub()).toEqual(expect.stringContaining(engineer.github.toString()));
+        });
+    });
 
     describe("getRole", () => {
-        it('Gets role of Engineer', () => {
+        it('Gets the role of Engineer', () => {
             const engineer = new Engineer('Delilah', '1', 'ila0406@gmail.com');
 
             expect(engineer.getRole()).toEqual("Engineer");

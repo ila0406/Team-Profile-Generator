@@ -3,9 +3,9 @@ const Manager = require("../lib/Manager");
 describe("Manager", () => {
     describe("officeNumber", () => {
         it("Should return an employee with their office number", () => {
-            const employee = new Employee('Delilah', '1', 'ila0406@gmail.com','123');
+            const manager = new Manager('Delilah', '1', 'ila0406@gmail.com','123');
     
-            expect(employee.officeNumber).toBeDefined();
+            expect(manager.officeNumber).toBeDefined();
             });
     });
 
